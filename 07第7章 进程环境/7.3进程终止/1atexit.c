@@ -24,3 +24,11 @@ static void my_exit1(void){
 static void my_exit2(void){
 	printf("second exit handle\n");
 }
+
+/*
+
+wu_being@ubuntukylin64:~/GitHub/AdvancedProgrammingintheUNIXEnvironment_ThirdEdition/07第7章 进程环境/7.3进程终止$ gcc 1atexit.c 
+wu_being@ubuntukylin64:~/GitHub/AdvancedProgrammingintheUNIXEnvironment_ThirdEdition/07第7章 进程环境/7.3进程终止$ ./a.out 
+main is done! 
+wu_being@ubuntukylin64:~/GitHub/AdvancedProgrammingintheUNIXEnvironment_ThirdEdition/07第7章 进程环境/7.3进程终止$ 
+*/
