@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include <dirent.h>
 
+
+/**
+ * Copyright ? 2016 Authors. All rights reserved.
+ *
+ * FileName: .cpp
+ * Author: Wu_Being <1040003585@qq.com>
+ * Date/Time: 2017/04/18
+ * Description: 
+ */
+
+
 int main(int argc, char const *argv[])
 {
 	DIR *dp;

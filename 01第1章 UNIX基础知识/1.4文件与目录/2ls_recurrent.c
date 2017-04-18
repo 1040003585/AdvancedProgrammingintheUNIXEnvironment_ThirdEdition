@@ -3,6 +3,16 @@
 #include <stdlib.h>
 #include <dirent.h>
 
+/**
+ * Copyright ? 2016 Authors. All rights reserved.
+ *
+ * FileName: .cpp
+ * Author: Wu_Being <1040003585@qq.com>
+ * Date/Time: 2017/04/18
+ * Description: 
+ */
+
+
 void print(char *dir,int len){
 	len += 2;
 
@@ -18,6 +28,7 @@ void print(char *dir,int len){
 		if(dirp->d_type==4 && dirp->d_name[0]!='.'){//dir
 			strcat(dir,dirp->d_name);
 			strcat(dir,"/");
+			printf("> %s\n", dir);
 			print(dir, len);//print()
 			strcat(dir,"../");
 		}
