@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <string.h>	//strerror()
 #include <errno.h>
 // #include <asm/errno.h>
 
