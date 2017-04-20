@@ -1,0 +1,4 @@
+#include <bits/errno.h>
+#include <asm/errno.h>
+#include <asm-generic/errno.h>
+#include <asm-generic/errno-base.h>
