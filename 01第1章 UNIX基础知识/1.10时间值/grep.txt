@@ -1,0 +1,60 @@
+wu_being@ubuntukylin64:~/GitHub/AdvancedProgrammingintheUNIXEnvironment_ThirdEdition/01第1章 UNIX基础知识/1.10时间值$ time grep "#include <stdio.h>" ../*/*
+grep: ../1.3登录/etc: 是一个目录
+../1.4文件与目录/1ls.c:#include <stdio.h>
+../1.4文件与目录/2ls_recurrent.c:#include <stdio.h>
+../1.4文件与目录/3delete_all_out_file.c:#include <stdio.h>
+../1.4文件与目录/4ls_recurrent_shortdir.c:#include <stdio.h>
+../1.4文件与目录/5delete_all_out_file_short_dir.c:#include <stdio.h>
+../1.4文件与目录/test_replateempty.c:#include <stdio.h>
+grep: ../1.5输入与输出/3.不带缓冲的IO: 是一个目录
+grep: ../1.5输入与输出/4.标准IO: 是一个目录
+../1.6程序与进程/1getpid.c:#include <stdio.h>
+../1.6程序与进程/2fork.c:#include <stdio.h>
+../1.6程序与进程/3fork.c:#include <stdio.h>
+../1.6程序与进程/4shell.c:#include <stdio.h>
+../1.7错误处理/1strerror_perror.c:#include <stdio.h>
+../1.7错误处理/2all_errno.c:#include <stdio.h>
+../1.7错误处理/3prog1.c:#include <stdio.h>
+../1.7错误处理/3prog3.c:#include <stdio.h>
+../1.7错误处理/4prog1.c:#include <stdio.h>
+../1.7错误处理/4prog2.c:#include <stdio.h>
+../1.7错误处理/4prog3.c:#include <stdio.h>
+../1.7错误处理/5stderr_file.c:#include <stdio.h>
+../1.8用户标识/1getuid_getgid.c:#include <stdio.h>
+grep: ../1.8用户标识/etc: 是一个目录
+../1.9信号/1shell.c:#include <stdio.h>
+
+real	0m0.009s
+user	0m0.008s
+sys	0m0.000s
+wu_being@ubuntukylin64:~/GitHub/AdvancedProgrammingintheUNIXEnvironment_ThirdEdition/01第1章 UNIX基础知识/1.10时间值$ 
+
+
+
+
+
+
+
+
+
+
+wu_being@ubuntukylin64:~/GitHub/AdvancedProgrammingintheUNIXEnvironment_ThirdEdition/01第1章 UNIX基础知识/1.10时间值$ time grep "_POSIX_SOURCE" /usr/include/*/*.h > grep.txt
+
+real	0m4.865s
+user	0m0.032s
+sys	0m0.196s
+wu_being@ubuntukylin64:~/GitHub/AdvancedProgrammingintheUNIXEnvironment_ThirdEdition/01第1章 UNIX基础知识/1.10时间值$ 
+
+
+
+/usr/include/X11/Xosdefs.h: * You may still have to define _POSIX_SOURCE to get it.
+/usr/include/X11/Xosdefs.h:#    if !defined(_POSIX_SOURCE)
+/usr/include/X11/Xosdefs.h:#  if defined(_XOPEN_SOURCE) || defined(_POSIX_SOURCE) || defined(_POSIX_C_SOURCE)
+/usr/include/X11/Xos.h:# if defined(_POSIX_SOURCE) && defined(SVR4)
+/usr/include/X11/Xos.h:/* need to omit _POSIX_SOURCE in order to get what we want in SVR4 */
+/usr/include/X11/Xos.h:#  undef _POSIX_SOURCE
+/usr/include/X11/Xos.h:#  define _POSIX_SOURCE
+/usr/include/X11/Xos.h:# endif /* defined(_POSIX_SOURCE) && defined(SVR4) */
+/usr/include/X11/Xos_r.h:#  ifdef _POSIX_SOURCE
+/usr/include/X11/Xos_r.h:#   define _POSIX_SOURCE
+/usr/include/X11/Xos_r.h:#   undef _POSIX_SOURCE
