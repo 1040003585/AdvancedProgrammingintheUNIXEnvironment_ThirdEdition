@@ -1,0 +1,7 @@
+stdout: printf
+stderr: fprintf
+stdout: printf
+stderr: fprintf
+stderr: fprintf
+stdout: printf
+stdout: printf
