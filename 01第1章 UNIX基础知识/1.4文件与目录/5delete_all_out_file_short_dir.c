@@ -43,7 +43,7 @@ void delete_file(char *dir, char *file){
 		strcat(cmd, dirgood);
 		strcat(cmd, file);
 		printf("> %s\n", cmd);
-		system(cmd); //!!!
+		// system(cmd); //!!!
 	}
 }
 
