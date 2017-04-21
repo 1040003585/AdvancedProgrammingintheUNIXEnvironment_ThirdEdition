@@ -1,5 +1,16 @@
 #include <stdio.h>
 
+/**
+ * Copyright ? 2016 Authors. All rights reserved.
+ *
+ * FileName: .cpp
+ * Author: Wu_Being <1040003585@qq.com>
+ * Date Time: 2017-04-21 15:40:1492760446
+ * Description: 
+ *
+ */
+
+
 int main(int argc, char const *argv[])
 {
 	printf("stdout: printf\n");
