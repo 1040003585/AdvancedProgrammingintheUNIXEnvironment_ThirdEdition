@@ -43,7 +43,7 @@ void delete_file(char *dir, char *file){
 		strcat(cmd, dirgood);
 		strcat(cmd, file);
 		printf("> %s\n", cmd);
-		system(cmd); //!!!
+		//system(cmd); //!!!
 	}
 }
 
@@ -59,8 +59,10 @@ void print(char *dir,int len){
 	while((dirp=readdir(dp)) != NULL){
 		int l=len; while(l--)putchar(' ');
 		printf("%s \n", dirp->d_name);
-		delete_file(dir, dirp->d_name);//delete_file()
-		if(dirp->d_type==4 && dirp->d_name[0]!='.'){//dir
+		if(dirp->d_type==8) delete_file(dir, dirp->d_name);//delete_file()
+//		if(dirp->d_type==4 && dirp->d_name[0]!='.'){//dir
+		if(dirp->d_type==4 ){//dir
+			if( strcmp(dirp->d_name, ".")==0 || strcmp(dirp->d_name, "..")==0 ) continue;
 	
 			char dirnew[255];//
 			strcpy(dirnew, dir);
