@@ -53,17 +53,17 @@ void print(char *dir,int len){
 	DIR *dp;
 	if((dp=opendir(dir)) == NULL){
 		fprintf(stderr, "[-] Can't open %s\n", dir);
+		fprintf(stderr, "[-] Usage: ./a.out directory_name/ postfixname\n");
 	}
 
 	struct dirent *dirp;
 	while((dirp=readdir(dp)) != NULL){
 		int l=len; while(l--)putchar(' ');
 		printf("%s \n", dirp->d_name);
-		if(dirp->d_type==8) delete_file(dir, dirp->d_name);//delete_file()
+		if(dirp->d_type==8) delete_file(dir, dirp->d_name);//delete_file()// .out/
 //		if(dirp->d_type==4 && dirp->d_name[0]!='.'){//dir
 		if(dirp->d_type==4 ){//dir
 			if( strcmp(dirp->d_name, ".")==0 || strcmp(dirp->d_name, "..")==0 ) continue;
-	
 			char dirnew[255];//
 			strcpy(dirnew, dir);
 			strcat(dirnew, dirp->d_name);
