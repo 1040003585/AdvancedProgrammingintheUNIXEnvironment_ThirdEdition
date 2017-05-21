@@ -24,13 +24,14 @@ void print(char *dir,int len){
 	struct dirent *dirp;
 	while((dirp=readdir(dp)) != NULL){
 		int l=len; while(l--)putchar(' ');
-		printf("%s \n", dirp->d_name);
-		if(dirp->d_type==4 && dirp->d_name[0]!='.'){//dir
-			strcat(dir,dirp->d_name);
+		printf("> %s: ", dir);printf("%s \n", dirp->d_name);
+		if(dirp->d_type==4 ){//dir
+			if( strcmp(dirp->d_name, ".")==0 || strcmp(dirp->d_name, "..")==0 ) continue;
 			strcat(dir,"/");
+			strcat(dir,dirp->d_name);
 			printf("> %s\n", dir);
 			print(dir, len);//print()
-			strcat(dir,"../");
+			strcat(dir,"/..");
 		}
 	}
 	closedir(dp);
